@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="2dp"
+    tools:context=".pages.travel_routes.TRSearch">
+
+    <FrameLayout
+        android:id="@+id/MapFragmentContainer2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/BottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingTop="4dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="4dp">
+
+        <Button
+            android:id="@+id/ReturnButton4"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/arrow_left_thin"
+            android:text="@string/blank"
+            app:backgroundTint="@color/black" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/BTMapBusTimesPanel"
+        android:layout_width="match_parent"
+        android:layout_height="205dp"
+        android:layout_gravity="bottom"
+        android:background="#BAFFFFFF"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="47dp"
+                    android:layout_weight="0" />
+
+                <LinearLayout
+                    android:layout_width="386dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_weight="0" />
+
+                    <TextView
+                        android:id="@+id/BusStopNameTextt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:backgroundTint="@color/transparent"
+                        android:fontFamily="@font/albertsans6_semibold"
+                        android:paddingHorizontal="0dp"
+                        android:paddingVertical="0dp"
+                        android:text="Afghanistan"
+                        android:textColor="#1C1B1B"
+                        android:textSize="32sp"
+                        android:transitionName="BusStopNameTextt" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/BusServicesBT"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/weight"
+                    android:layout_width="11dp"
+                    android:layout_height="47dp"
+                    android:layout_weight="0"
+                    android:rotationX="0"
+                    android:scaleX="0" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

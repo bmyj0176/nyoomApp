@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackground"
+    tools:context=".pages.bookmarks.Bookmarks">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/BOOKMARK_ICON"
+                android:layout_width="33dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:src="@drawable/ic_bookmark"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/YOUR_BOOKMARKS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/albertsans6_semibold"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp"
+                android:text="Your Bookmarks"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/REFRESH_ICON"
+                android:layout_width="33dp"
+                android:layout_height="25dp"
+                android:layout_gravity="right|center_vertical"
+                android:paddingRight="8dp"
+                android:src="@drawable/refresh"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/BookmarksRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/SadBookmark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.6">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="100dp"
+            app:srcCompat="@drawable/sadbookmark_dark" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/albertsans7_bold"
+            android:gravity="center"
+            android:paddingTop="150dp"
+            android:text="No Bookmarks"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/albertsans7_bold"
+            android:gravity="center"
+            android:paddingTop="210dp"
+            android:text="at the moment!"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/ConfirmationPopup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/blackBG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.4"
+            android:background="@color/black" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/PopupPanel"
+                android:layout_width="320dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounder_box"
+                android:backgroundTint="@color/buttonPanel"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:id="@+id/DELETE_BOOKMARK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/albertsans5_medium"
+                    android:text="Delete Bookmark?"
+                    android:textColor="@color/hintGray"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/BookmarkStopName"
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:autoSizeMaxTextSize="32sp"
+                    android:autoSizeMinTextSize="20sp"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/albertsans6_semibold"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Choa Chu Kang/Lot 1"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/ConfirmationButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/albertsans8_extrabold"
+                    android:letterSpacing="0.02"
+                    android:text="Confirm"
+                    android:textAllCaps="false"
+                    android:textColor="@color/redError"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/CancellationButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="right"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            app:srcCompat="@drawable/the_x"
+            app:tint="@color/white" />
+
+    </FrameLayout>
+
+</FrameLayout>

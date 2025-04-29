@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SplashBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_light"
+    tools:context=".pages.misc.Startup">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:rotationY="0">
+
+        <ImageView
+            android:id="@+id/NyoomEffect"
+            android:layout_width="1080px"
+            android:layout_height="1920px"
+            android:layout_gravity="center"
+            app:tint="@color/white"
+            app:srcCompat="@drawable/nyoom_effect" />
+
+        <ImageView
+            android:id="@+id/NYOOM"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/nyoom" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
