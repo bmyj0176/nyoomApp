@@ -1,6 +1,6 @@
 # *nyoom* Travel App
 
-![nyoom](./public/images/nyoom_banner.png)
+![nyoom](./app/src/main/res/drawable/nyoomtextshadow.png)
 
 ***Revolutionize Your Travel Experience***
 
